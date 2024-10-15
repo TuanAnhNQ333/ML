@@ -38,3 +38,28 @@ def compute_accuracy(X, y, theta):
     acc = (y_hat == y).mean()
     
     return acc
+train_accs = []
+train_losses = []
+val_accs = []
+val_losses = []
+
+for epoch in range(epochs):
+    train_batch_losses = []
+    train_batch_accs = []
+    val_batch_losses = []
+    val_batch_accs = []
+    
+    for i in range(0. X_train.shape[0], batch_size) :
+        X_i = X_train[i:i+batch_size]
+        Y_i = y_train[1:i+batch_size]
+        
+        y_hat = predict(X_i, theta)
+        
+        train_loss = compute_loss(y_hat, y_i)
+        gradien = compute_gradient(X_i, y_i, y_hat)
+        
+        theta = update_theta(theta, gradient, lr)
+        
+        train_batch_losses.append(train_loss)
+        
+        train_accs
