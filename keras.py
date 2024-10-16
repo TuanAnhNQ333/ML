@@ -35,6 +35,7 @@ model.compile(loss='mse', optimizer=sgd)
 model.fit(X, y, epochs=100, batch_size=2)
 
 model.get_weights()
+##
 
 
 
