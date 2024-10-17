@@ -69,4 +69,4 @@ else:
     })
 
 # Save the submission to a CSV file
-submission.to_csv('/Users/macbook/Documents/egg/egg-linear-regression-contest/submission.csv', index=False)
+submission.to_csv('/Users/macbook/Documents/egg/egg-linear-regression-contest/submission1.csv', index=False)
