@@ -4,7 +4,16 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-dataset_path = 'titanic_modified_dataset.csv'
+dataset_path = pd.read_csv('/Users/macbook/Documents/egg/egg-linear-regression-contest/titanic_modified_dataset.csv')
+print(dataset_path.head())
+df = pd.read_csv(
+    dataset_path,
+    index_col = 'PassengerId'
+)
+
+
+
+
 # ham sigmoid
 def sigmoid(z):
     return 1 / (1 + np.exp(-z))
