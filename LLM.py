@@ -21,3 +21,8 @@ to fruitfully process large natural language corpora.""")
 
 for token in doc:
     print(token)
+    
+from nltk.corpus import stopwords
+
+nltk.download('stopwords')
+print(stopwords.words('english'))
